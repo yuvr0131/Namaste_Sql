@@ -176,8 +176,7 @@ where order_date like '2020-12-[0-9][0-9]'
  -- write a query to get all the orders where customer name neither start with "A" and nor ends with "n" (9815 rows)
  select * 
  from orders
- where customer_name not like 'A%'
-  and customer_name not like '%n';
+ where customer_name not like 'A%n'
 
   --  write a query to get all the orders where profit is negative (1871 rows)
   select * 
