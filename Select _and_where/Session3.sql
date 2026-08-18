@@ -194,9 +194,10 @@ where order_date like '2020-12-[0-9][0-9]'
   where Region='South' and discount>0;
 
  -- write a query to find top 5 orders with highest sales in furniture category 
- select top 5 Sales
+ select top 5 * 
  from orders
- where Category ='Furniture';
+ where Category ='Furniture'
+  order by sales desc;
 
  --  write a query to find all the records in technology and furniture category for the orders placed in the year 2020 only (1021 rows)
   select * 
