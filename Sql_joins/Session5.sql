@@ -74,13 +74,13 @@ ORDER BY Total_Sales DESC;
   group by d.dep_name;
 
   -- 4- write a query to print dep names where none of the employees have same salary.
-      select d.dep_name
-      from dept d
-       join 
-      employee e
-      on d.dept_id=e.dept_id
-      group by d.dep_name
-      having count(e.emp_id)=count(distinct e.salary);
+    select d.dep_name
+ from dept d
+  left join 
+ employee e
+ on d.dept_id=e.dept_id
+ group by d.dep_name
+ having count(e.emp_id)=count(distinct e.salary);
 
 -- 5. write a query to print sub categories where we have all 3 kinds of returns (others,bad quality,wrong items)
       Select o.Sub_Category
